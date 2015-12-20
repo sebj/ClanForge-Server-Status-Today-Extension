@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="ClanForge_Server_Status" customModuleProvider="target">
+            <connections>
+                <outlet property="listViewController" destination="vLu-t9-fwO" id="cso-Rh-DC1"/>
+                <outlet property="loadingView" destination="AZM-32-3Ji" id="K8O-ru-MKU"/>
+                <outlet property="textField" destination="y0l-ft-bhW" id="y6I-WM-0j8"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY" userLabel="Main View">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="66"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="AZM-32-3Ji" userLabel="Loading View">
+                    <rect key="frame" x="0.0" y="0.0" width="302" height="66"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y0l-ft-bhW">
+                            <rect key="frame" x="18" y="24" width="266" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="7bu-g7-We1"/>
+                            </constraints>
+                            <animations/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Loading..." id="AbU-lf-ag8">
+                                <font key="font" metaFont="system" size="14"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="y0l-ft-bhW" secondAttribute="bottom" constant="24" identifier="123" id="4Ih-cj-xhS"/>
+                        <constraint firstItem="y0l-ft-bhW" firstAttribute="top" secondItem="AZM-32-3Ji" secondAttribute="top" constant="24" identifier="124" id="Txc-1R-oXx"/>
+                        <constraint firstItem="y0l-ft-bhW" firstAttribute="leading" secondItem="AZM-32-3Ji" secondAttribute="leading" constant="20" identifier="125" id="V0R-me-7Na"/>
+                        <constraint firstAttribute="trailing" secondItem="y0l-ft-bhW" secondAttribute="trailing" constant="20" identifier="126" id="jhq-RC-Eqc"/>
+                    </constraints>
+                    <animations/>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AZM-32-3Ji" secondAttribute="bottom" identifier="127" id="6Xf-Ib-AXO"/>
+                <constraint firstAttribute="trailing" secondItem="AZM-32-3Ji" secondAttribute="trailing" identifier="128" id="6rv-H0-5Dm"/>
+                <constraint firstItem="AZM-32-3Ji" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" identifier="129" id="Rfp-iM-Sz5"/>
+                <constraint firstItem="AZM-32-3Ji" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" identifier="130" id="f8E-d5-jQe"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="199" y="272"/>
+        </customView>
+        <viewController id="vLu-t9-fwO" customClass="NCWidgetListViewController">
+            <connections>
+                <outlet property="delegate" destination="-2" id="vCn-hJ-OcV"/>
+                <outlet property="view" destination="Juh-RV-K8v" id="UXy-Tx-kew"/>
+            </connections>
+        </viewController>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Juh-RV-K8v" userLabel="ListViewController View">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="86"/>
+            <animations/>
+            <point key="canvasLocation" x="543" y="272"/>
+        </customView>
+    </objects>
+</document>

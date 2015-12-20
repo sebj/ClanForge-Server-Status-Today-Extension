@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EditViewController" customModule="ClanForge_Server_Status">
+            <connections>
+                <outlet property="accountIDField" destination="0HN-7r-fGN" id="PNb-oO-3ws"/>
+                <outlet property="view" destination="c22-O7-iKe" id="4mh-B6-vxS"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sKb-Ak-Saj">
+                    <rect key="frame" x="18" y="56" width="75" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="Hd0-dc-9rY"/>
+                        <constraint firstAttribute="height" constant="17" id="eU9-Dy-nSu"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Account ID:" id="uUO-ej-tDW">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0HN-7r-fGN">
+                    <rect key="frame" x="99" y="53" width="62" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="a8L-3M-Dxb"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="123456" drawsBackground="YES" id="JBs-2o-kXo">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <outlet property="delegate" destination="-2" id="CMM-gm-xTg"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FD0-MF-4QZ">
+                    <rect key="frame" x="18" y="20" width="284" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="G5B-Mt-sj9"/>
+                        <constraint firstAttribute="height" constant="28" id="VWU-vn-Zng"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Hover over your server and look for the number in the format AB123456." id="ZAI-Od-1G8">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mBg-Ui-rSq">
+                    <rect key="frame" x="142" y="19" width="12" height="17"/>
+                    <animations/>
+                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSFollowLinkFreestandingTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="BGU-YU-ncT">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="FD0-MF-4QZ" firstAttribute="top" secondItem="0HN-7r-fGN" secondAttribute="bottom" constant="5" id="2kI-tH-cWt"/>
+                <constraint firstItem="FD0-MF-4QZ" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="4WB-K1-WTu"/>
+                <constraint firstAttribute="bottom" secondItem="FD0-MF-4QZ" secondAttribute="bottom" constant="20" id="Ole-ET-qdG"/>
+                <constraint firstItem="0HN-7r-fGN" firstAttribute="leading" secondItem="sKb-Ak-Saj" secondAttribute="trailing" constant="8" id="Q53-1J-1YX"/>
+                <constraint firstItem="0HN-7r-fGN" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="YUG-gc-g09"/>
+                <constraint firstAttribute="trailing" secondItem="FD0-MF-4QZ" secondAttribute="trailing" constant="20" id="cZ8-Fy-hmK"/>
+                <constraint firstItem="sKb-Ak-Saj" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="fSB-vB-5kd"/>
+                <constraint firstAttribute="trailing" secondItem="0HN-7r-fGN" secondAttribute="trailing" constant="159" id="gqm-Od-ood"/>
+                <constraint firstItem="sKb-Ak-Saj" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="22" id="jD1-Qi-8nN"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="215" y="196.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSFollowLinkFreestandingTemplate" width="14" height="14"/>
+    </resources>
+</document>
