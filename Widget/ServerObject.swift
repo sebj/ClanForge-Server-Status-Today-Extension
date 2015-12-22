@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ServerObject : NSObject {
+class ServerObject : NSObject, NSCoding {
     var type: String?
     var name: String?
     var address: String?
@@ -16,7 +16,44 @@ class ServerObject : NSObject {
     var players: Int = 0
     var maxPlayers: Int = 0
     
+    override init() {
+        super.init()
+    }
+    
+    init(type: String?, name: String?, address: String?, status: String?, players: Int, maxPlayers: Int) {
+        super.init()
+        
+        self.type = type
+        self.name = name
+        self.address = address
+        self.status = status
+        self.players = players
+        self.maxPlayers = maxPlayers
+    }
+    
     override var description: String {
         return "<ServerObject: name=\(name!) address=\(address) status=\(status) players=\(players) maxPlayers=\(maxPlayers)>"
+    }
+    
+    // MARK: NSCoding
+    
+    required convenience init(coder decoder: NSCoder) {
+        self.init(
+            type: decoder.decodeObjectForKey("type") as? String,
+            name: decoder.decodeObjectForKey("name") as? String,
+            address: decoder.decodeObjectForKey("address") as? String,
+            status: decoder.decodeObjectForKey("status") as? String,
+            players: decoder.decodeIntegerForKey("players"),
+            maxPlayers: decoder.decodeIntegerForKey("maxPlayers")
+        )
+    }
+    
+    func encodeWithCoder(coder: NSCoder) {
+        coder.encodeObject(type, forKey: "type")
+        coder.encodeObject(name, forKey: "name")
+        coder.encodeObject(address, forKey: "address")
+        coder.encodeObject(status, forKey: "status")
+        coder.encodeInteger(players, forKey: "players")
+        coder.encodeInteger(maxPlayers, forKey: "maxPlayers")
     }
 }

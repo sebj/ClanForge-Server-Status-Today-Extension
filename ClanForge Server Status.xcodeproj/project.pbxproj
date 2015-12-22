@@ -19,8 +19,8 @@
 		962CF6BF1C231D990020EE01 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960706F61C2221ED003EF7D5 /* EditViewController.xib */; };
 		9666A0D81C21E0F700D3FEB7 /* ClanForge Server Status.appex in Embed Today Widget */ = {isa = PBXBuildFile; fileRef = 9614568C1C1D920D00EB435E /* ClanForge Server Status.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9666A0DE1C21FFB000D3FEB7 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9666A0DC1C21FFAD00D3FEB7 /* EditViewController.swift */; };
-		96C08EF71C1EEA9000600253 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C08EF61C1EEA9000600253 /* Utils.swift */; };
-		96C08EF81C1EEA9000600253 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C08EF61C1EEA9000600253 /* Utils.swift */; };
+		96C08EF71C1EEA9000600253 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C08EF61C1EEA9000600253 /* Globals.swift */; };
+		96C08EF81C1EEA9000600253 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C08EF61C1EEA9000600253 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		961456A81C1D945400EB435E /* ServerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerObject.swift; sourceTree = "<group>"; };
 		9666A0DB1C21E86000D3FEB7 /* ClanForge Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ClanForge Status.entitlements"; sourceTree = "<group>"; };
 		9666A0DC1C21FFAD00D3FEB7 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		96C08EF61C1EEA9000600253 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		96C08EF61C1EEA9000600253 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		9614566F1C1D91F000EB435E = {
 			isa = PBXGroup;
 			children = (
-				96C08EF61C1EEA9000600253 /* Utils.swift */,
+				96C08EF61C1EEA9000600253 /* Globals.swift */,
 				9614567A1C1D91F000EB435E /* ClanForge Status */,
 				961456901C1D920D00EB435E /* Widget */,
 				9614568D1C1D920D00EB435E /* Frameworks */,
@@ -269,7 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9614567C1C1D91F000EB435E /* AppDelegate.swift in Sources */,
-				96C08EF71C1EEA9000600253 /* Utils.swift in Sources */,
+				96C08EF71C1EEA9000600253 /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +281,7 @@
 				961456941C1D920D00EB435E /* TodayViewController.swift in Sources */,
 				961456A91C1D945400EB435E /* ServerObject.swift in Sources */,
 				961456961C1D920D00EB435E /* ListRowViewController.swift in Sources */,
-				96C08EF81C1EEA9000600253 /* Utils.swift in Sources */,
+				96C08EF81C1EEA9000600253 /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

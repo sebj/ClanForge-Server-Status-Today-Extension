@@ -19,6 +19,10 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     var currentView: NSView!
     
     var timer = NSTimer()
+    let timerInterval:Double = 60
+    let timerTolerance:Double = 15
+    
+    let sharedUD = NSUserDefaults(suiteName: UDSuiteName)
     
     // MARK: - NSViewController
 
@@ -32,15 +36,36 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         currentView = loadingView
         //editViewController.todayController = self
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "refreshData", userInfo: nil, repeats: true)
-        timer.tolerance = 15
+        timer = NSTimer.scheduledTimerWithTimeInterval(timerInterval, target: self, selector: "refreshData", userInfo: nil, repeats: true)
+        timer.tolerance = timerTolerance
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
         
         self.listViewController.contents = []
+        
+        let lastRefresh: NSDate? = sharedUD?.objectForKey(UDLastRefreshKey) as! NSDate?
+        if let lastRefreshDate = lastRefresh {
+            
+            let now = NSDate()
+            let difference = now.timeIntervalSinceDate(lastRefreshDate)
+            
+            if difference <= ((timerInterval+timerTolerance)*1.2) {
+                restoreCachedData()
+            }
+        }
     }
     
+    func restoreCachedData() {
+        let cachedData: NSData? = sharedUD?.dataForKey(UDCacheKey)
+        
+        if let cache = cachedData {
+            print("Restoring cache")
+            
+            let cachedServerList: Array<ServerObject> = NSKeyedUnarchiver.unarchiveObjectWithData(cache) as! Array<ServerObject>
+            listViewController.contents = cachedServerList
+        }
+    }
+
     func refreshData() {
-        let sharedUD = NSUserDefaults(suiteName: UDSuiteName)
         
         let accountID = sharedUD?.stringForKey(UDAccountIDKey)
         
@@ -69,7 +94,10 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
                         print("Error: \(err)")
                         self.textField.stringValue = "Failed to refresh"
                         
+                        self.performSelectorOnMainThread(Selector("restoreCachedData"), withObject: nil, waitUntilDone: false)
+                        
                     } else if let d = data {
+                        print("Refreshed")
                         self.parseData(d)
                     }
                 }).resume()
@@ -166,6 +194,13 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         tempServerList = []
         
         replaceCurrentViewWith(listViewController.view)
+        
+        sharedUD?.setObject(NSDate(), forKey: UDLastRefreshKey)
+        //sharedUD?.setObject(listViewController.contents, forKey: UDCacheKey)
+        
+        let data = NSKeyedArchiver.archivedDataWithRootObject(listViewController.contents)
+        sharedUD?.setObject(data, forKey: UDCacheKey)
+
     }
 
     // MARK: - NCWidgetProviding

@@ -13,3 +13,4 @@ let UDSuiteName = "group.me.sebj.ClanForge-Server-Status"
 
 let UDAccountIDKey = "accountID"
 let UDCacheKey = "dataCache"
+let UDLastRefreshKey = "lastRefresh"
