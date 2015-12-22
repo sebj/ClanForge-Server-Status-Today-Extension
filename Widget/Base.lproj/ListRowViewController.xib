@@ -14,45 +14,37 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SKk-6n-KwJ" userLabel="Name">
-                    <rect key="frame" x="-2" y="22" width="304" height="18"/>
+                    <rect key="frame" x="-2" y="14" width="304" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" identifier="136" id="hgD-yV-zYW"/>
                     </constraints>
                     <animations/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Players" id="jNz-tQ-ZTq">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" title="0 of 0 online" id="jNz-tQ-ZTq">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="-2" name="displayPatternValue2" keyPath="self.representedObject.maxPlayers" previousBinding="3BG-MK-ISA" id="NDu-BA-5mf">
+                        <binding destination="-2" name="displayPatternValue1" keyPath="self.representedObject.players" id="Wm7-mw-Nrm">
                             <dictionary key="options">
-                                <string key="NSDisplayPattern">%{value1}@ of %{value2}@ players</string>
+                                <string key="NSDisplayPattern">%{value1}@ of %{value2}@ online</string>
                                 <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
                             </dictionary>
                         </binding>
-                        <binding destination="-2" name="displayPatternValue1" keyPath="self.representedObject.players" id="3BG-MK-ISA">
+                        <binding destination="-2" name="displayPatternValue2" keyPath="self.representedObject.maxPlayers" previousBinding="Wm7-mw-Nrm" id="9r4-aO-4U0">
                             <dictionary key="options">
-                                <string key="NSDisplayPattern">%{value1}@ of %{value2}@ players</string>
+                                <string key="NSDisplayPattern">%{value1}@ of %{value2}@ online</string>
                                 <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
                             </dictionary>
                         </binding>
                     </connections>
                 </textField>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="tUO-8B-wh4" customClass="StatusView" customModule="ClanForge_Server_Status" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="51" width="10" height="10"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="10" identifier="137" id="HEb-c6-fdB"/>
-                        <constraint firstAttribute="width" constant="10" identifier="138" id="HWG-Yq-XYk"/>
-                    </constraints>
-                    <animations/>
-                </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-MB-4x2" userLabel="Name">
-                    <rect key="frame" x="14" y="47" width="288" height="19"/>
+                    <rect key="frame" x="16" y="39" width="286" height="19"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="19" identifier="139" id="P1j-bh-1bO"/>
                     </constraints>
@@ -66,17 +58,25 @@
                         <binding destination="-2" name="value" keyPath="self.representedObject.name" id="SlZ-57-efS"/>
                     </connections>
                 </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="tUO-8B-wh4" customClass="StatusView" customModule="ClanForge_Server_Status" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="43" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" identifier="137" id="HEb-c6-fdB"/>
+                        <constraint firstAttribute="width" constant="10" identifier="138" id="HWG-Yq-XYk"/>
+                    </constraints>
+                    <animations/>
+                </customView>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="SKk-6n-KwJ" secondAttribute="trailing" constant="20" identifier="145" id="FJp-T1-sKt"/>
-                <constraint firstAttribute="bottom" secondItem="SKk-6n-KwJ" secondAttribute="bottom" constant="22" identifier="146" id="GLZ-Q8-Vnd"/>
-                <constraint firstItem="KU6-MB-4x2" firstAttribute="leading" secondItem="tUO-8B-wh4" secondAttribute="trailing" constant="6" identifier="140" id="Gt3-1Y-cK5"/>
+                <constraint firstAttribute="bottom" secondItem="SKk-6n-KwJ" secondAttribute="bottom" constant="14" identifier="146" id="GLZ-Q8-Vnd"/>
+                <constraint firstItem="KU6-MB-4x2" firstAttribute="leading" secondItem="tUO-8B-wh4" secondAttribute="trailing" constant="8" identifier="140" id="Gt3-1Y-cK5"/>
                 <constraint firstItem="SKk-6n-KwJ" firstAttribute="top" secondItem="KU6-MB-4x2" secondAttribute="bottom" constant="7" identifier="147" id="NTI-4y-XhU"/>
-                <constraint firstItem="tUO-8B-wh4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="25" identifier="143" id="Oh9-l2-vh7"/>
+                <constraint firstItem="tUO-8B-wh4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="19" identifier="143" id="Oh9-l2-vh7"/>
                 <constraint firstItem="tUO-8B-wh4" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" identifier="144" id="bub-HX-XtM"/>
                 <constraint firstItem="SKk-6n-KwJ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" identifier="148" id="dHb-V8-plh"/>
                 <constraint firstAttribute="trailing" secondItem="KU6-MB-4x2" secondAttribute="trailing" constant="20" identifier="141" id="eQX-kX-ygg"/>
-                <constraint firstItem="KU6-MB-4x2" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" identifier="142" id="eiY-9H-Vy4"/>
+                <constraint firstItem="KU6-MB-4x2" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="14" identifier="142" id="eiY-9H-Vy4"/>
             </constraints>
             <animations/>
             <point key="canvasLocation" x="419" y="310"/>

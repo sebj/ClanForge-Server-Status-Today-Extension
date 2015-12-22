@@ -6,7 +6,7 @@
 
 import Cocoa
 
-class StatusView : NSView {
+class IndicatorView : NSView {
     var up: Bool = true
     
     let greenColor = NSColor(calibratedRed:0.325, green:0.843, blue:0.302, alpha:1)
@@ -23,7 +23,7 @@ class StatusView : NSView {
 
 class ListRowViewController: NSViewController {
     
-    @IBOutlet var statusView: StatusView?
+    @IBOutlet var statusIndicatorView: IndicatorView?
 
     override var nibName: String? {
         return "ListRowViewController"
@@ -35,7 +35,7 @@ class ListRowViewController: NSViewController {
         let server = self.representedObject as? ServerObject
         
         if let serverStatus = server?.status {
-            statusView!.up = (serverStatus.caseInsensitiveCompare("UP") == NSComparisonResult.OrderedSame)
+            statusIndicatorView!.up = (serverStatus.caseInsensitiveCompare("UP") == NSComparisonResult.OrderedSame)
         }
     }
 
