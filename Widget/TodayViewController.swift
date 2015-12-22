@@ -7,6 +7,12 @@
 import Cocoa
 import NotificationCenter
 
+func debugOnlyPrint(message: AnyObject) {
+    #if DEBUG
+        print(message)
+    #endif
+}
+
 class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListViewDelegate, NSXMLParserDelegate {
     
     var settingsChanged = false
@@ -58,7 +64,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         let cachedData: NSData? = sharedUD?.dataForKey(UDCacheKey)
         
         if let cache = cachedData {
-            print("Restoring cache")
+            debugOnlyPrint("Restoring cache")
             
             let cachedServerList: Array<ServerObject> = NSKeyedUnarchiver.unarchiveObjectWithData(cache) as! Array<ServerObject>
             listViewController.contents = cachedServerList
@@ -97,7 +103,9 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
                         self.performSelectorOnMainThread(Selector("restoreCachedData"), withObject: nil, waitUntilDone: false)
                         
                     } else if let d = data {
-                        print("Refreshed")
+                        
+                        debugOnlyPrint("Refreshed")
+                            
                         self.parseData(d)
                     }
                 }).resume()
@@ -130,10 +138,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         startedElementName = elementName
         
         if elementName == "server" {
-            let server = ServerObject()
-            server.address = attributeDict["address"]
-            server.status = attributeDict["status"]
-            server.type = attributeDict["type"]
+            let server = ServerObject(type: attributeDict["type"], name: nil, address: attributeDict["address"], status: attributeDict["status"], players: 0, maxPlayers: 0)
             currentObject = server
         }
     }
@@ -188,7 +193,9 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     }
     
     func updateServerList(newServerList: Array<ServerObject>) {
-        //print("Finished loading")
+        //debugOnlyPrint("Finished loading")
+        debugOnlyPrint(newServerList)
+        
         listViewController.contents = newServerList
         
         tempServerList = []

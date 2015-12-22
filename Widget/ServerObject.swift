@@ -16,10 +16,6 @@ class ServerObject : NSObject, NSCoding {
     var players: Int = 0
     var maxPlayers: Int = 0
     
-    override init() {
-        super.init()
-    }
-    
     init(type: String?, name: String?, address: String?, status: String?, players: Int, maxPlayers: Int) {
         super.init()
         
@@ -32,7 +28,23 @@ class ServerObject : NSObject, NSCoding {
     }
     
     override var description: String {
-        return "<ServerObject: name=\(name!) address=\(address) status=\(status) players=\(players) maxPlayers=\(maxPlayers)>"
+        
+        var desc = "<ServerObject:"
+        
+        if let t = type {
+            desc += " type='\(t)\'"
+        }
+        if let n = name {
+            desc += " name='\(n)'"
+        }
+        if let a = address {
+            desc += " address='\(a)'"
+        }
+        if let s = status {
+            desc += " status='\(s)'"
+        }
+        
+        return desc+" players=\(players) maxPlayers=\(maxPlayers)>"
     }
     
     // MARK: NSCoding
