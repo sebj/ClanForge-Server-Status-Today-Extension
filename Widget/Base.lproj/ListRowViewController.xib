@@ -29,7 +29,6 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <action selector="click:" target="-2" id="8ho-LY-Mou"/>
                         <binding destination="-2" name="displayPatternValue2" keyPath="self.representedObject.maxPlayers" previousBinding="3BG-MK-ISA" id="NDu-BA-5mf">
                             <dictionary key="options">
                                 <string key="NSDisplayPattern">%{value1}@ of %{value2}@ players</string>
@@ -64,7 +63,6 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <action selector="click:" target="-2" id="Yqb-AJ-eqz"/>
                         <binding destination="-2" name="value" keyPath="self.representedObject.name" id="SlZ-57-efS"/>
                     </connections>
                 </textField>
