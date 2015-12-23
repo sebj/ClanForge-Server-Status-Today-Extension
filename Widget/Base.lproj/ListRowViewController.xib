@@ -7,7 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ListRowViewController" customModule="ClanForge_Server_Status" customModuleProvider="target">
             <connections>
-                <outlet property="statusView" destination="tUO-8B-wh4" id="gyk-uS-mvB"/>
+                <outlet property="statusIndicatorView" destination="tUO-8B-wh4" id="8zY-LA-eh2"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -29,13 +29,13 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="-2" name="displayPatternValue1" keyPath="self.representedObject.players" id="Wm7-mw-Nrm">
+                        <binding destination="-2" name="displayPatternValue2" keyPath="self.representedObject.maxPlayers" previousBinding="Wm7-mw-Nrm" id="9r4-aO-4U0">
                             <dictionary key="options">
                                 <string key="NSDisplayPattern">%{value1}@ of %{value2}@ online</string>
                                 <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
                             </dictionary>
                         </binding>
-                        <binding destination="-2" name="displayPatternValue2" keyPath="self.representedObject.maxPlayers" previousBinding="Wm7-mw-Nrm" id="9r4-aO-4U0">
+                        <binding destination="-2" name="displayPatternValue1" keyPath="self.representedObject.players" id="Wm7-mw-Nrm">
                             <dictionary key="options">
                                 <string key="NSDisplayPattern">%{value1}@ of %{value2}@ online</string>
                                 <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
@@ -58,7 +58,7 @@
                         <binding destination="-2" name="value" keyPath="self.representedObject.name" id="SlZ-57-efS"/>
                     </connections>
                 </textField>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="tUO-8B-wh4" customClass="StatusView" customModule="ClanForge_Server_Status" customModuleProvider="target">
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="tUO-8B-wh4" customClass="IndicatorView" customModule="ClanForge_Server_Status" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="43" width="10" height="10"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="10" identifier="137" id="HEb-c6-fdB"/>

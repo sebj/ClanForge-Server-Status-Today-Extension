@@ -10,7 +10,7 @@ class IndicatorView : NSView {
     var up: Bool = true
     
     let greenColor = NSColor(calibratedRed:0.325, green:0.843, blue:0.302, alpha:1)
-    let redColor = NSColor(calibratedRed:1, green:0.353, blue:0.349, alpha:1)
+    let redColor = NSColor(calibratedRed:1, green:0.247, blue:0.251, alpha:1)
     
     override func drawRect(dirtyRect: NSRect) {
         let path = NSBezierPath(ovalInRect: self.bounds)
@@ -23,7 +23,7 @@ class IndicatorView : NSView {
 
 class ListRowViewController: NSViewController {
     
-    @IBOutlet var statusIndicatorView: IndicatorView?
+    @IBOutlet var statusIndicatorView: IndicatorView!
 
     override var nibName: String? {
         return "ListRowViewController"
