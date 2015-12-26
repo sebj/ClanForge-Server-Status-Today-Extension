@@ -4,6 +4,6 @@ An OS X Today Extension to show the status of your [ClanForge (Multiplay)](https
 
 ##Screenshots
 
-![Activate](/Screenshots/Activate.png)
-![Preferences](/Screenshots/Preferences.png)
-![Widget](/Screenshots/Widget.png)
+<img align="center" src="/Screenshots/Widget.png" alt="Widget" />
+<img align="center" src="/Screenshots/Activate.png" alt="Activate" />
+<img align="center" src="/Screenshots/Preferences.png" alt="Preferences" />
