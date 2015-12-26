@@ -22,7 +22,7 @@ func debugOnlyPrint(items: Any...) {
 }
 
 func validAccountID(accountID: String?) -> Bool {
-    if let a = accountID, i = Int(a) where a.characters.count == 6 {
+    if let a = accountID, _ = Int(a) where a.characters.count == 6 {
         return true
     }
     
