@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C3AA93333FA73B9BF5C4653AC9C5366651ADF4D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9CCE2A29C60557F927D07EB6095B4DB02AD64F17" : 0,
+    "C3AA93333FA73B9BF5C4653AC9C5366651ADF4D6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "21A1D8C9-D96B-41B3-B63F-B22669D64DCD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9CCE2A29C60557F927D07EB6095B4DB02AD64F17" : "ClanForge-Server-Status-Today-Extension\/RMSharedPreferences\/",
+    "C3AA93333FA73B9BF5C4653AC9C5366651ADF4D6" : "ClanForge-Server-Status-Today-Extension\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ClanForge Server Status",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ClanForge Server Status.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sebj\/RMSharedPreferences",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9CCE2A29C60557F927D07EB6095B4DB02AD64F17"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sebj\/ClanForge-Server-Status-Today-Extension.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3AA93333FA73B9BF5C4653AC9C5366651ADF4D6"
+    }
+  ]
+}
