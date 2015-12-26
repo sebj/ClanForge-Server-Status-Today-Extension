@@ -389,7 +389,7 @@
         <window title="ClanForge Server Status" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="mainWindow" animationBehavior="default" id="Gg4-aD-Jo5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
             <rect key="contentRect" x="131" y="158" width="331" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="uTJ-gr-c5w">
                 <rect key="frame" x="0.0" y="0.0" width="331" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -460,7 +460,6 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <action selector="accountIDChanged:" target="Voe-Tx-rLC" id="ZOc-M9-EJd"/>
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="dNb-mO-p7n"/>
                     </connections>
                 </textField>
