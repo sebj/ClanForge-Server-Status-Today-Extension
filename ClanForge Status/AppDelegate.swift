@@ -23,6 +23,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         showSection(1)
     }
     
+    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+        return true;
+    }
+    
     @IBAction func showSectionView(sender: AnyObject) {
         let index = mainWindow.toolbar?.items.indexOf(sender as! NSToolbarItem)
         showSection(index!)
