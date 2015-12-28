@@ -7,146 +7,144 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9614567C1C1D91F000EB435E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9614567B1C1D91F000EB435E /* AppDelegate.swift */; };
-		961456811C1D91F000EB435E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9614567F1C1D91F000EB435E /* MainMenu.xib */; };
-		9614568F1C1D920D00EB435E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9614568E1C1D920D00EB435E /* NotificationCenter.framework */; };
-		961456941C1D920D00EB435E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961456931C1D920D00EB435E /* TodayViewController.swift */; };
-		961456961C1D920D00EB435E /* ListRowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961456951C1D920D00EB435E /* ListRowViewController.swift */; };
-		961456991C1D920D00EB435E /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 961456971C1D920D00EB435E /* TodayViewController.xib */; };
-		9614569C1C1D920D00EB435E /* ListRowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9614569A1C1D920D00EB435E /* ListRowViewController.xib */; };
-		961456A01C1D920D00EB435E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9614569E1C1D920D00EB435E /* InfoPlist.strings */; };
-		961456A91C1D945400EB435E /* ServerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961456A81C1D945400EB435E /* ServerObject.swift */; };
-		962CF6BF1C231D990020EE01 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960706F61C2221ED003EF7D5 /* EditViewController.xib */; };
-		9666A0D81C21E0F700D3FEB7 /* ClanForge Server Status.appex in Embed Today Widget */ = {isa = PBXBuildFile; fileRef = 9614568C1C1D920D00EB435E /* ClanForge Server Status.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9666A0DE1C21FFB000D3FEB7 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9666A0DC1C21FFAD00D3FEB7 /* EditViewController.swift */; };
-		96C08EF71C1EEA9000600253 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C08EF61C1EEA9000600253 /* Globals.swift */; };
-		96C08EF81C1EEA9000600253 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C08EF61C1EEA9000600253 /* Globals.swift */; };
+		9644BA261C30AF5D00992E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644BA251C30AF5D00992E50 /* AppDelegate.swift */; };
+		9644BA2B1C30AF5D00992E50 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9644BA291C30AF5D00992E50 /* MainMenu.xib */; };
+		9644BA391C30AF7B00992E50 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9644BA381C30AF7B00992E50 /* NotificationCenter.framework */; };
+		9644BA3E1C30AF7B00992E50 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644BA3D1C30AF7B00992E50 /* TodayViewController.swift */; };
+		9644BA401C30AF7B00992E50 /* ListRowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644BA3F1C30AF7B00992E50 /* ListRowViewController.swift */; };
+		9644BA431C30AF7B00992E50 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9644BA411C30AF7B00992E50 /* TodayViewController.xib */; };
+		9644BA461C30AF7B00992E50 /* ListRowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9644BA441C30AF7B00992E50 /* ListRowViewController.xib */; };
+		9644BA4A1C30AF7B00992E50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9644BA481C30AF7B00992E50 /* InfoPlist.strings */; };
+		9644BA4D1C30AF7B00992E50 /* Today Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9644BA361C30AF7B00992E50 /* Today Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9644BA531C30B06600992E50 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644BA521C30B06600992E50 /* Globals.swift */; };
+		9644BA541C30B06600992E50 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644BA521C30B06600992E50 /* Globals.swift */; };
+		9644BA561C30B08200992E50 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644BA551C30B08200992E50 /* EditViewController.swift */; };
+		9644BA591C30B09D00992E50 /* EditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9644BA571C30B09D00992E50 /* EditViewController.xib */; };
+		9644BA5B1C30B0A700992E50 /* ServerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644BA5A1C30B0A700992E50 /* ServerObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		961456A11C1D920D00EB435E /* PBXContainerItemProxy */ = {
+		9644BA4B1C30AF7B00992E50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 961456701C1D91F000EB435E /* Project object */;
+			containerPortal = 9644BA1A1C30AF5C00992E50 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9614568B1C1D920D00EB435E;
-			remoteInfo = TodayWidget;
+			remoteGlobalIDString = 9644BA351C30AF7B00992E50;
+			remoteInfo = "Today Extension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9666A09E1C21DFE300D3FEB7 /* Embed Today Widget */ = {
+		9644BA511C30AF7B00992E50 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9666A0D81C21E0F700D3FEB7 /* ClanForge Server Status.appex in Embed Today Widget */,
+				9644BA4D1C30AF7B00992E50 /* Today Extension.appex in Embed App Extensions */,
 			);
-			name = "Embed Today Widget";
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		960706F61C2221ED003EF7D5 /* EditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditViewController.xib; path = Base.lproj/EditViewController.xib; sourceTree = "<group>"; };
-		961456781C1D91F000EB435E /* ClanForge Server Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClanForge Server Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9614567B1C1D91F000EB435E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		961456801C1D91F000EB435E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		961456821C1D91F000EB435E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9614568C1C1D920D00EB435E /* ClanForge Server Status.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ClanForge Server Status.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9614568E1C1D920D00EB435E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		961456921C1D920D00EB435E /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Widget.entitlements; sourceTree = "<group>"; };
-		961456931C1D920D00EB435E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		961456951C1D920D00EB435E /* ListRowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowViewController.swift; sourceTree = "<group>"; };
-		961456981C1D920D00EB435E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
-		9614569B1C1D920D00EB435E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ListRowViewController.xib; sourceTree = "<group>"; };
-		9614569D1C1D920D00EB435E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9614569F1C1D920D00EB435E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		961456A81C1D945400EB435E /* ServerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerObject.swift; sourceTree = "<group>"; };
-		9666A0DB1C21E86000D3FEB7 /* ClanForge Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ClanForge Status.entitlements"; sourceTree = "<group>"; };
-		9666A0DC1C21FFAD00D3FEB7 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		96C08EF61C1EEA9000600253 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		9644BA221C30AF5D00992E50 /* ClanForge Server Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClanForge Server Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9644BA251C30AF5D00992E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9644BA2A1C30AF5D00992E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9644BA2C1C30AF5D00992E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9644BA361C30AF7B00992E50 /* Today Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Today Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9644BA381C30AF7B00992E50 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		9644BA3C1C30AF7B00992E50 /* Today_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Today_Extension.entitlements; sourceTree = "<group>"; };
+		9644BA3D1C30AF7B00992E50 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		9644BA3F1C30AF7B00992E50 /* ListRowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowViewController.swift; sourceTree = "<group>"; };
+		9644BA421C30AF7B00992E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/TodayViewController.xib; sourceTree = "<group>"; };
+		9644BA451C30AF7B00992E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ListRowViewController.xib; sourceTree = "<group>"; };
+		9644BA471C30AF7B00992E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9644BA491C30AF7B00992E50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9644BA521C30B06600992E50 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		9644BA551C30B08200992E50 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		9644BA581C30B09D00992E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EditViewController.xib; sourceTree = "<group>"; };
+		9644BA5A1C30B0A700992E50 /* ServerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		961456751C1D91F000EB435E /* Frameworks */ = {
+		9644BA1F1C30AF5D00992E50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		961456891C1D920D00EB435E /* Frameworks */ = {
+		9644BA331C30AF7B00992E50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9614568F1C1D920D00EB435E /* NotificationCenter.framework in Frameworks */,
+				9644BA391C30AF7B00992E50 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9614566F1C1D91F000EB435E = {
+		9644BA191C30AF5C00992E50 = {
 			isa = PBXGroup;
 			children = (
-				96C08EF61C1EEA9000600253 /* Globals.swift */,
-				9614567A1C1D91F000EB435E /* ClanForge Status */,
-				961456901C1D920D00EB435E /* Widget */,
-				9614568D1C1D920D00EB435E /* Frameworks */,
-				961456791C1D91F000EB435E /* Products */,
+				9644BA521C30B06600992E50 /* Globals.swift */,
+				9644BA241C30AF5D00992E50 /* App */,
+				9644BA3A1C30AF7B00992E50 /* Today Extension */,
+				9644BA371C30AF7B00992E50 /* Frameworks */,
+				9644BA231C30AF5D00992E50 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		961456791C1D91F000EB435E /* Products */ = {
+		9644BA231C30AF5D00992E50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				961456781C1D91F000EB435E /* ClanForge Server Status.app */,
-				9614568C1C1D920D00EB435E /* ClanForge Server Status.appex */,
+				9644BA221C30AF5D00992E50 /* ClanForge Server Status.app */,
+				9644BA361C30AF7B00992E50 /* Today Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9614567A1C1D91F000EB435E /* ClanForge Status */ = {
+		9644BA241C30AF5D00992E50 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				9666A0DB1C21E86000D3FEB7 /* ClanForge Status.entitlements */,
-				9614567B1C1D91F000EB435E /* AppDelegate.swift */,
-				9614567F1C1D91F000EB435E /* MainMenu.xib */,
-				961456821C1D91F000EB435E /* Info.plist */,
+				9644BA251C30AF5D00992E50 /* AppDelegate.swift */,
+				9644BA291C30AF5D00992E50 /* MainMenu.xib */,
+				9644BA2C1C30AF5D00992E50 /* Info.plist */,
 			);
-			path = "ClanForge Status";
+			path = App;
 			sourceTree = "<group>";
 		};
-		9614568D1C1D920D00EB435E /* Frameworks */ = {
+		9644BA371C30AF7B00992E50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9614568E1C1D920D00EB435E /* NotificationCenter.framework */,
+				9644BA381C30AF7B00992E50 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		961456901C1D920D00EB435E /* Widget */ = {
+		9644BA3A1C30AF7B00992E50 /* Today Extension */ = {
 			isa = PBXGroup;
 			children = (
-				961456A81C1D945400EB435E /* ServerObject.swift */,
-				961456931C1D920D00EB435E /* TodayViewController.swift */,
-				961456971C1D920D00EB435E /* TodayViewController.xib */,
-				9666A0DC1C21FFAD00D3FEB7 /* EditViewController.swift */,
-				960706F61C2221ED003EF7D5 /* EditViewController.xib */,
-				961456951C1D920D00EB435E /* ListRowViewController.swift */,
-				9614569A1C1D920D00EB435E /* ListRowViewController.xib */,
-				9614569D1C1D920D00EB435E /* Info.plist */,
-				9614569E1C1D920D00EB435E /* InfoPlist.strings */,
-				961456911C1D920D00EB435E /* Supporting Files */,
+				9644BA5A1C30B0A700992E50 /* ServerObject.swift */,
+				9644BA3D1C30AF7B00992E50 /* TodayViewController.swift */,
+				9644BA411C30AF7B00992E50 /* TodayViewController.xib */,
+				9644BA551C30B08200992E50 /* EditViewController.swift */,
+				9644BA571C30B09D00992E50 /* EditViewController.xib */,
+				9644BA3F1C30AF7B00992E50 /* ListRowViewController.swift */,
+				9644BA441C30AF7B00992E50 /* ListRowViewController.xib */,
+				9644BA471C30AF7B00992E50 /* Info.plist */,
+				9644BA481C30AF7B00992E50 /* InfoPlist.strings */,
+				9644BA3B1C30AF7B00992E50 /* Supporting Files */,
 			);
-			path = Widget;
+			path = "Today Extension";
 			sourceTree = "<group>";
 		};
-		961456911C1D920D00EB435E /* Supporting Files */ = {
+		9644BA3B1C30AF7B00992E50 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				961456921C1D920D00EB435E /* Widget.entitlements */,
+				9644BA3C1C30AF7B00992E50 /* Today_Extension.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,64 +152,56 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		961456771C1D91F000EB435E /* Multiplay Server Status */ = {
+		9644BA211C30AF5D00992E50 /* ClanForge Server Status */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 961456851C1D91F000EB435E /* Build configuration list for PBXNativeTarget "Multiplay Server Status" */;
+			buildConfigurationList = 9644BA2F1C30AF5D00992E50 /* Build configuration list for PBXNativeTarget "ClanForge Server Status" */;
 			buildPhases = (
-				961456741C1D91F000EB435E /* Sources */,
-				961456751C1D91F000EB435E /* Frameworks */,
-				961456761C1D91F000EB435E /* Resources */,
-				9666A09E1C21DFE300D3FEB7 /* Embed Today Widget */,
+				9644BA1E1C30AF5D00992E50 /* Sources */,
+				9644BA1F1C30AF5D00992E50 /* Frameworks */,
+				9644BA201C30AF5D00992E50 /* Resources */,
+				9644BA511C30AF7B00992E50 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				961456A21C1D920D00EB435E /* PBXTargetDependency */,
-			);
-			name = "Multiplay Server Status";
-			productName = "ClanForge Status";
-			productReference = 961456781C1D91F000EB435E /* ClanForge Server Status.app */;
-			productType = "com.apple.product-type.application";
-		};
-		9614568B1C1D920D00EB435E /* ClanForge Server Status */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 961456A41C1D920D00EB435E /* Build configuration list for PBXNativeTarget "ClanForge Server Status" */;
-			buildPhases = (
-				961456881C1D920D00EB435E /* Sources */,
-				961456891C1D920D00EB435E /* Frameworks */,
-				9614568A1C1D920D00EB435E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
+				9644BA4C1C30AF7B00992E50 /* PBXTargetDependency */,
 			);
 			name = "ClanForge Server Status";
-			productName = TodayWidget;
-			productReference = 9614568C1C1D920D00EB435E /* ClanForge Server Status.appex */;
+			productName = "ClanForge Server Status";
+			productReference = 9644BA221C30AF5D00992E50 /* ClanForge Server Status.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9644BA351C30AF7B00992E50 /* Today Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9644BA4E1C30AF7B00992E50 /* Build configuration list for PBXNativeTarget "Today Extension" */;
+			buildPhases = (
+				9644BA321C30AF7B00992E50 /* Sources */,
+				9644BA331C30AF7B00992E50 /* Frameworks */,
+				9644BA341C30AF7B00992E50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Today Extension";
+			productName = "Today Extension";
+			productReference = 9644BA361C30AF7B00992E50 /* Today Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		961456701C1D91F000EB435E /* Project object */ = {
+		9644BA1A1C30AF5C00992E50 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Sebastian Jachec";
 				TargetAttributes = {
-					961456771C1D91F000EB435E = {
+					9644BA211C30AF5D00992E50 = {
 						CreatedOnToolsVersion = 7.1.1;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.Mac = {
-								enabled = 1;
-							};
-							com.apple.Sandbox = {
-								enabled = 0;
-							};
-						};
 					};
-					9614568B1C1D920D00EB435E = {
+					9644BA351C30AF7B00992E50 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 9GQ7YX93KJ;
 						SystemCapabilities = {
@@ -222,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 961456731C1D91F000EB435E /* Build configuration list for PBXProject "ClanForge Server Status" */;
+			buildConfigurationList = 9644BA1D1C30AF5C00992E50 /* Build configuration list for PBXProject "ClanForge Server Status" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -230,108 +220,116 @@
 				en,
 				Base,
 			);
-			mainGroup = 9614566F1C1D91F000EB435E;
-			productRefGroup = 961456791C1D91F000EB435E /* Products */;
+			mainGroup = 9644BA191C30AF5C00992E50;
+			productRefGroup = 9644BA231C30AF5D00992E50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				961456771C1D91F000EB435E /* Multiplay Server Status */,
-				9614568B1C1D920D00EB435E /* ClanForge Server Status */,
+				9644BA211C30AF5D00992E50 /* ClanForge Server Status */,
+				9644BA351C30AF7B00992E50 /* Today Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		961456761C1D91F000EB435E /* Resources */ = {
+		9644BA201C30AF5D00992E50 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961456811C1D91F000EB435E /* MainMenu.xib in Resources */,
+				9644BA2B1C30AF5D00992E50 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9614568A1C1D920D00EB435E /* Resources */ = {
+		9644BA341C30AF7B00992E50 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962CF6BF1C231D990020EE01 /* EditViewController.xib in Resources */,
-				961456991C1D920D00EB435E /* TodayViewController.xib in Resources */,
-				961456A01C1D920D00EB435E /* InfoPlist.strings in Resources */,
-				9614569C1C1D920D00EB435E /* ListRowViewController.xib in Resources */,
+				9644BA591C30B09D00992E50 /* EditViewController.xib in Resources */,
+				9644BA431C30AF7B00992E50 /* TodayViewController.xib in Resources */,
+				9644BA4A1C30AF7B00992E50 /* InfoPlist.strings in Resources */,
+				9644BA461C30AF7B00992E50 /* ListRowViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		961456741C1D91F000EB435E /* Sources */ = {
+		9644BA1E1C30AF5D00992E50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9614567C1C1D91F000EB435E /* AppDelegate.swift in Sources */,
-				96C08EF71C1EEA9000600253 /* Globals.swift in Sources */,
+				9644BA531C30B06600992E50 /* Globals.swift in Sources */,
+				9644BA261C30AF5D00992E50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		961456881C1D920D00EB435E /* Sources */ = {
+		9644BA321C30AF7B00992E50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9666A0DE1C21FFB000D3FEB7 /* EditViewController.swift in Sources */,
-				961456941C1D920D00EB435E /* TodayViewController.swift in Sources */,
-				961456A91C1D945400EB435E /* ServerObject.swift in Sources */,
-				961456961C1D920D00EB435E /* ListRowViewController.swift in Sources */,
-				96C08EF81C1EEA9000600253 /* Globals.swift in Sources */,
+				9644BA561C30B08200992E50 /* EditViewController.swift in Sources */,
+				9644BA3E1C30AF7B00992E50 /* TodayViewController.swift in Sources */,
+				9644BA5B1C30B0A700992E50 /* ServerObject.swift in Sources */,
+				9644BA401C30AF7B00992E50 /* ListRowViewController.swift in Sources */,
+				9644BA541C30B06600992E50 /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		961456A21C1D920D00EB435E /* PBXTargetDependency */ = {
+		9644BA4C1C30AF7B00992E50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9614568B1C1D920D00EB435E /* ClanForge Server Status */;
-			targetProxy = 961456A11C1D920D00EB435E /* PBXContainerItemProxy */;
+			target = 9644BA351C30AF7B00992E50 /* Today Extension */;
+			targetProxy = 9644BA4B1C30AF7B00992E50 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9614567F1C1D91F000EB435E /* MainMenu.xib */ = {
+		9644BA291C30AF5D00992E50 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				961456801C1D91F000EB435E /* Base */,
+				9644BA2A1C30AF5D00992E50 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
-		961456971C1D920D00EB435E /* TodayViewController.xib */ = {
+		9644BA411C30AF7B00992E50 /* TodayViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				961456981C1D920D00EB435E /* Base */,
+				9644BA421C30AF7B00992E50 /* Base */,
 			);
 			name = TodayViewController.xib;
 			sourceTree = "<group>";
 		};
-		9614569A1C1D920D00EB435E /* ListRowViewController.xib */ = {
+		9644BA441C30AF7B00992E50 /* ListRowViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9614569B1C1D920D00EB435E /* Base */,
+				9644BA451C30AF7B00992E50 /* Base */,
 			);
 			name = ListRowViewController.xib;
 			sourceTree = "<group>";
 		};
-		9614569E1C1D920D00EB435E /* InfoPlist.strings */ = {
+		9644BA481C30AF7B00992E50 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9614569F1C1D920D00EB435E /* en */,
+				9644BA491C30AF7B00992E50 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9644BA571C30B09D00992E50 /* EditViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9644BA581C30B09D00992E50 /* Base */,
+			);
+			name = EditViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		961456831C1D91F000EB435E /* Debug */ = {
+		9644BA2D1C30AF5D00992E50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -375,7 +373,7 @@
 			};
 			name = Debug;
 		};
-		961456841C1D91F000EB435E /* Release */ = {
+		9644BA2E1C30AF5D00992E50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -411,68 +409,56 @@
 			};
 			name = Release;
 		};
-		961456861C1D91F000EB435E /* Debug */ = {
+		9644BA301C30AF5D00992E50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "ClanForge Status/ClanForge Status.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = "ClanForge Status/Info.plist";
+				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status";
-				PRODUCT_NAME = "ClanForge Server Status";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		961456871C1D91F000EB435E /* Release */ = {
+		9644BA311C30AF5D00992E50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "ClanForge Status/ClanForge Status.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = "ClanForge Status/Info.plist";
+				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				OTHER_SWIFT_FLAGS = "-D RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status";
-				PRODUCT_NAME = "ClanForge Server Status";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		961456A51C1D920D00EB435E /* Debug */ = {
+		9644BA4F1C30AF7B00992E50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
-				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Today Extension/Today_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Widget/Info.plist;
+				INFOPLIST_FILE = "Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status.Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status.Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		961456A61C1D920D00EB435E /* Release */ = {
+		9644BA501C30AF7B00992E50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = NO;
-				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Today Extension/Today_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				COMBINE_HIDPI_IMAGES = YES;ST_FILE = Widget/Info.plist;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				OTHER_SWIFT_FLAGS = "-D RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status.Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status.Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -480,34 +466,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		961456731C1D91F000EB435E /* Build configuration list for PBXProject "ClanForge Server Status" */ = {
+		9644BA1D1C30AF5C00992E50 /* Build configuration list for PBXProject "ClanForge Server Status" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				961456831C1D91F000EB435E /* Debug */,
-				961456841C1D91F000EB435E /* Release */,
+				9644BA2D1C30AF5D00992E50 /* Debug */,
+				9644BA2E1C30AF5D00992E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		961456851C1D91F000EB435E /* Build configuration list for PBXNativeTarget "Multiplay Server Status" */ = {
+		9644BA2F1C30AF5D00992E50 /* Build configuration list for PBXNativeTarget "ClanForge Server Status" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				961456861C1D91F000EB435E /* Debug */,
-				961456871C1D91F000EB435E /* Release */,
+				9644BA301C30AF5D00992E50 /* Debug */,
+				9644BA311C30AF5D00992E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		961456A41C1D920D00EB435E /* Build configuration list for PBXNativeTarget "ClanForge Server Status" */ = {
+		9644BA4E1C30AF7B00992E50 /* Build configuration list for PBXNativeTarget "Today Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				961456A51C1D920D00EB435E /* Debug */,
-				961456A61C1D920D00EB435E /* Release */,
+				9644BA4F1C30AF7B00992E50 /* Debug */,
+				9644BA501C30AF7B00992E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 961456701C1D91F000EB435E /* Project object */;
+	rootObject = 9644BA1A1C30AF5C00992E50 /* Project object */;
 }
