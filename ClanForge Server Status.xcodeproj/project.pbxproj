@@ -65,6 +65,7 @@
 		9644BA551C30B08200992E50 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		9644BA581C30B09D00992E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EditViewController.xib; sourceTree = "<group>"; };
 		9644BA5A1C30B0A700992E50 /* ServerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerObject.swift; sourceTree = "<group>"; };
+		96D641961C329CC200653433 /* ClanForge Server Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "ClanForge Server Status.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 		9644BA191C30AF5C00992E50 = {
 			isa = PBXGroup;
 			children = (
+				96D641961C329CC200653433 /* ClanForge Server Status.entitlements */,
 				9644BA521C30B06600992E50 /* Globals.swift */,
 				9644BA241C30AF5D00992E50 /* App */,
 				9644BA3A1C30AF7B00992E50 /* Today Extension */,
@@ -200,6 +202,15 @@
 				TargetAttributes = {
 					9644BA211C30AF5D00992E50 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 9GQ7YX93KJ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					9644BA351C30AF7B00992E50 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -412,6 +423,9 @@
 		9644BA301C30AF5D00992E50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ClanForge Server Status.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = App/Info.plist;
@@ -424,6 +438,9 @@
 		9644BA311C30AF5D00992E50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ClanForge Server Status.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = App/Info.plist;
