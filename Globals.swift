@@ -2,7 +2,7 @@
 //  Utils.swift
 
 //  Created by Sebastian Jachec on 14/12/2015.
-//  Copyright © 2015 Sebastian Jachec. All rights reserved.
+//  Copyright © 2016 Sebastian Jachec. All rights reserved.
 
 import Foundation
 
