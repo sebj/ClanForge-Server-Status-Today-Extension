@@ -42,6 +42,7 @@ class ServerObject : NSObject, NSCoding {
             desc += " status='\(s)'"
         }
         
+        
         return desc+" players=\(players) maxPlayers=\(maxPlayers)>"
     }
     
