@@ -203,6 +203,8 @@
 					9644BA211C30AF5D00992E50 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 9GQ7YX93KJ;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
@@ -215,6 +217,8 @@
 					9644BA351C30AF7B00992E50 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 9GQ7YX93KJ;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 1;
@@ -424,7 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "ClanForge Server Status.entitlements";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: sjachec1@gmail.com (VAH84DLTL8)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -432,6 +436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -439,7 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "ClanForge Server Status.entitlements";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: sjachec1@gmail.com (VAH84DLTL8)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -447,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -454,7 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Today Extension/Today_Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: sjachec1@gmail.com (VAH84DLTL8)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Today Extension/Info.plist";
@@ -462,6 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status.Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -469,7 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Today Extension/Today_Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: sjachec1@gmail.com (VAH84DLTL8)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Today Extension/Info.plist";
@@ -477,6 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.sebj.ClanForge-Server-Status.Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

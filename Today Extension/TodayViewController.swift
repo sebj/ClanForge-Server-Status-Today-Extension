@@ -9,9 +9,9 @@ import NotificationCenter
 
 //http://stackoverflow.com/a/26725096/447697
 
-class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListViewDelegate, NSXMLParserDelegate {
+class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListViewDelegate, XMLParserDelegate {
     
-    let sharedUD = NSUserDefaults(suiteName: UDSuiteName)
+    let sharedUD = UserDefaults(suiteName: UDSuiteName)
     var settingsChanged = false
     
     @IBOutlet var listViewController: NCWidgetListViewController!
@@ -24,7 +24,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     
     var refreshCompletionHandler: ((NCUpdateResult) -> Void)!
     
-    var refreshTimer = NSTimer()
+    var refreshTimer = Timer()
     let refreshInterval:Double = 60
     let timerTolerance:Double = 15
     
@@ -42,17 +42,17 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         
         currentView = loadingView
         
-        refreshTimer = NSTimer.scheduledTimerWithTimeInterval(refreshInterval, target: self, selector: "refreshData", userInfo: nil, repeats: true)
+        refreshTimer = Timer.scheduledTimer(timeInterval: refreshInterval, target: self, selector: #selector(TodayViewController.refreshData), userInfo: nil, repeats: true)
         refreshTimer.tolerance = timerTolerance
-        NSRunLoop.mainRunLoop().addTimer(refreshTimer, forMode: NSRunLoopCommonModes)
+        RunLoop.main.add(refreshTimer, forMode: RunLoopMode.commonModes)
         
         self.listViewController.contents = []
         
-        let lastRefresh: NSDate? = sharedUD?.objectForKey(UDLastRefreshKey) as! NSDate?
+        let lastRefresh: Date? = sharedUD?.object(forKey: UDLastRefreshKey) as! Date?
         if let lastRefreshDate = lastRefresh {
             
-            let now = NSDate()
-            let difference = now.timeIntervalSinceDate(lastRefreshDate)
+            let now = Date()
+            let difference = now.timeIntervalSince(lastRefreshDate)
             
             if difference <= ((refreshInterval+timerTolerance)*1.2) {
                 restoreCachedData()
@@ -61,9 +61,9 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     }
     
     //Delay solution for flickering (i)/Done button bug from http://stackoverflow.com/a/26679638/447697
-    let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC)))
+    let delay = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
     
-    func replaceCurrentViewWith(newView: NSView) {
+    func replaceCurrentViewWith(_ newView: NSView) {
         
         if currentView != newView {
             
@@ -74,20 +74,20 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
             container.replaceSubview(currentView, with: newView)
             
             let viewsDict = ["newView" : newView]
-            container.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[newView]|", options:NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDict))
-            container.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[newView]|", options:NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDict))
+            container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[newView]|", options:NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDict))
+            container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[newView]|", options:NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewsDict))
             
             self.currentView = newView
         }
     }
     
     func restoreCachedData() {
-        let cachedData: NSData? = sharedUD?.dataForKey(UDCacheKey)
+        let cachedData: Data? = sharedUD?.data(forKey: UDCacheKey)
         
         if let cache = cachedData {
             debugOnlyPrint("Restoring cached data")
             
-            let cachedServerList: Array<ServerObject> = NSKeyedUnarchiver.unarchiveObjectWithData(cache) as! Array<ServerObject>
+            let cachedServerList: Array<ServerObject> = NSKeyedUnarchiver.unarchiveObject(with: cache) as! Array<ServerObject>
             listViewController.contents = cachedServerList
         }
     }
@@ -95,7 +95,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     let setAccountIDMessage = "Set a valid Account ID – click (ℹ︎) to edit settings."
 
     func refreshData() {
-        let accountID = sharedUD?.stringForKey(UDAccountIDKey)
+        let accountID = sharedUD?.string(forKey: UDAccountIDKey)
         
         if validAccountID(accountID) {
             loading = true
@@ -103,20 +103,20 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
             
             replaceCurrentViewWith(loadingView)
             
-            let url = NSURL(string: "\(baseURL)\(accountID!)")!
+            let url = URL(string: "\(baseURL)\(accountID!)")!
             
-            let session = NSURLSession.sharedSession()
-            let request = NSURLRequest(URL: url, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
+            let session = URLSession.shared
+            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 15)
             
-            session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: NSError?) -> Void in
                 
                 if let err = error {
-                    self.refreshCompletionHandler(.Failed)
+                    self.refreshCompletionHandler(.failed)
                     
                     print("Error loading: \(err)")
                     self.textField.stringValue = "Failed to refresh"
                     
-                    self.performSelectorOnMainThread(Selector("restoreCachedData"), withObject: nil, waitUntilDone: false)
+                    self.performSelector(onMainThread: #selector(TodayViewController.restoreCachedData), with: nil, waitUntilDone: false)
                     
                 } else if let d = data {
                     
@@ -124,7 +124,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
                     
                     self.parseData(d)
                 }
-            }).resume()
+            } as! (Data?, URLResponse?, Error?) -> Void).resume()
             
         } else {
             textField.stringValue = setAccountIDMessage
@@ -133,8 +133,8 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     
     
     // MARK: Parsing
-    func parseData(data: NSData) {
-        let parser = NSXMLParser(data: data)
+    func parseData(_ data: Data) {
+        let parser = XMLParser(data: data)
         parser.delegate = self
         parser.parse()
     }
@@ -144,7 +144,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     var startedElementName: String?
     var currentString: String = ""
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
         startedElementName = elementName
         
@@ -154,7 +154,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         }
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String) {
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
         
         if string.characters.count > 0 {
             
@@ -164,11 +164,11 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         }
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
-        if let server = currentObject where elementName == startedElementName {
+        if let server = currentObject, elementName == startedElementName {
             
-            let tidiedString = currentString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            let tidiedString = currentString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
             
             switch elementName {
                 case "name":
@@ -196,12 +196,12 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         currentString = ""
     }
     
-    func parserDidEndDocument(parser: NSXMLParser) {
-        performSelectorOnMainThread(Selector("updateServerList:"), withObject: self.tempServerList, waitUntilDone: false)
+    func parserDidEndDocument(_ parser: XMLParser) {
+        performSelector(onMainThread: #selector(TodayViewController.updateServerList(_:)), with: self.tempServerList, waitUntilDone: false)
     }
     
     
-    func updateServerList(newServerList: Array<ServerObject>) {
+    func updateServerList(_ newServerList: Array<ServerObject>) {
         //debugOnlyPrint(newServerList)
         
         loading = false
@@ -214,20 +214,20 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         
         //Update User Defaults
         //Last refresh time
-        sharedUD?.setObject(NSDate(), forKey: UDLastRefreshKey)
+        sharedUD?.set(Date(), forKey: UDLastRefreshKey)
         
         //Cache server list array
-        let data = NSKeyedArchiver.archivedDataWithRootObject(listViewController.contents)
-        sharedUD?.setObject(data, forKey: UDCacheKey)
+        let data = NSKeyedArchiver.archivedData(withRootObject: listViewController.contents)
+        sharedUD?.set(data, forKey: UDCacheKey)
         
         
-        refreshCompletionHandler(.NewData)
+        refreshCompletionHandler(.newData)
     }
 
     
     // MARK: - NCWidgetProviding
 
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
+    func widgetPerformUpdate(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
         // Refresh the widget's contents in preparation for a snapshot.
         // Call the completion handler block after the widget's contents have been
         // refreshed. Pass NCUpdateResultNoData to indicate that nothing has changed
@@ -237,7 +237,8 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         refreshData()
     }
 
-    func widgetMarginInsetsForProposedMarginInsets(var defaultMarginInset: NSEdgeInsets) -> NSEdgeInsets {
+    func widgetMarginInsets(forProposedMarginInsets defaultMarginInset: EdgeInsets) -> EdgeInsets {
+        var defaultMarginInset = defaultMarginInset
         defaultMarginInset.left = 0
         defaultMarginInset.top = 0
         defaultMarginInset.bottom = 0
@@ -270,7 +271,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
             
         } else {
             
-            if let accountID = sharedUD?.stringForKey(UDAccountIDKey) where validAccountID(accountID) {
+            if let accountID = sharedUD?.string(forKey: UDAccountIDKey), validAccountID(accountID) {
                 replaceCurrentViewWith(listViewController.view)
                 
             } else {
@@ -284,18 +285,18 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
     
     // MARK: - NCWidgetListViewDelegate
 
-    func widgetList(list: NCWidgetListViewController!, viewControllerForRow row: Int) -> NSViewController! {
+    func widgetList(_ list: NCWidgetListViewController, viewControllerForRow row: Int) -> NSViewController {
         // Return a new view controller subclass for displaying an item of widget
         // content. The NCWidgetListViewController will set the representedObject
         // of this view controller to one of the objects in its contents array.
         return ListRowViewController()
     }
 
-    func widgetList(list: NCWidgetListViewController!, shouldReorderRow row: Int) -> Bool {
+    func widgetList(_ list: NCWidgetListViewController, shouldReorderRow row: Int) -> Bool {
         return false
     }
 
-    func widgetList(list: NCWidgetListViewController!, shouldRemoveRow row: Int) -> Bool {
+    func widgetList(_ list: NCWidgetListViewController, shouldRemoveRow row: Int) -> Bool {
         return false
     }
 

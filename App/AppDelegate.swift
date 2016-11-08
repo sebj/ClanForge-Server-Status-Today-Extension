@@ -16,23 +16,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet var activateView: NSView!
     
-    let sharedUD = NSUserDefaults(suiteName: UDSuiteName)
+    let sharedUD = UserDefaults(suiteName: UDSuiteName)
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         mainWindow.appearance = NSAppearance(named: NSAppearanceNameVibrantDark)
         showSection(1)
     }
     
-    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true;
     }
     
-    @IBAction func showSectionView(sender: AnyObject) {
-        let index = mainWindow.toolbar?.items.indexOf(sender as! NSToolbarItem)
+    @IBAction func showSectionView(_ sender: AnyObject) {
+        let index = mainWindow.toolbar?.items.index(of: sender as! NSToolbarItem)
         showSection(index!)
     }
     
-    func showSection(index: Int) {
+    func showSection(_ index: Int) {
         if index == 1 {
             mainWindow.contentView = activateView
             mainWindow.title = "Activate"
@@ -41,13 +41,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             mainWindow.contentView = settingsView
             mainWindow.title = "Preferences"
             
-            if let id = sharedUD?.stringForKey(UDAccountIDKey) {
+            if let id = sharedUD?.string(forKey: UDAccountIDKey) {
                 accountIDField.stringValue = id
             }
         }
     }
     
-    override func controlTextDidChange(obj: NSNotification) {
+    override func controlTextDidChange(_ obj: Notification) {
         let accountIDFieldString = accountIDField.stringValue
         
         if validAccountID(accountIDFieldString) {
@@ -56,16 +56,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    @IBAction func openSystemPreferencesPane(sender: NSButton) {
+    @IBAction func openSystemPreferencesPane(_ sender: NSButton) {
         
-        let fileURL = NSURL(fileURLWithPath: "/System/Library/PreferencePanes/Extensions.prefPane")
-        NSWorkspace.sharedWorkspace().openURL(fileURL)
+        let fileURL = URL(fileURLWithPath: "/System/Library/PreferencePanes/Extensions.prefPane")
+        NSWorkspace.shared().open(fileURL)
     }
     
-    @IBAction func openClanForge(sender: NSButton) {
+    @IBAction func openClanForge(_ sender: NSButton) {
         
-        let URL = NSURL(string: "https://clanforge.multiplay.co.uk/")
-        NSWorkspace.sharedWorkspace().openURL(URL!)
+        let URL = Foundation.URL(string: "https://clanforge.multiplay.co.uk/")
+        NSWorkspace.shared().open(URL!)
     }
 }
 

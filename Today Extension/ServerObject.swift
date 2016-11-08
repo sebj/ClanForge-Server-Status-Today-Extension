@@ -50,21 +50,21 @@ class ServerObject : NSObject, NSCoding {
     
     required convenience init(coder decoder: NSCoder) {
         self.init(
-            type: decoder.decodeObjectForKey("type") as? String,
-            name: decoder.decodeObjectForKey("name") as? String,
-            address: decoder.decodeObjectForKey("address") as? String,
-            status: decoder.decodeObjectForKey("status") as? String,
-            players: decoder.decodeIntegerForKey("players"),
-            maxPlayers: decoder.decodeIntegerForKey("maxPlayers")
+            type: decoder.decodeObject(forKey: "type") as? String,
+            name: decoder.decodeObject(forKey: "name") as? String,
+            address: decoder.decodeObject(forKey: "address") as? String,
+            status: decoder.decodeObject(forKey: "status") as? String,
+            players: decoder.decodeInteger(forKey: "players"),
+            maxPlayers: decoder.decodeInteger(forKey: "maxPlayers")
         )
     }
     
-    func encodeWithCoder(coder: NSCoder) {
-        coder.encodeObject(type, forKey: "type")
-        coder.encodeObject(name, forKey: "name")
-        coder.encodeObject(address, forKey: "address")
-        coder.encodeObject(status, forKey: "status")
-        coder.encodeInteger(players, forKey: "players")
-        coder.encodeInteger(maxPlayers, forKey: "maxPlayers")
+    func encode(with coder: NSCoder) {
+        coder.encode(type, forKey: "type")
+        coder.encode(name, forKey: "name")
+        coder.encode(address, forKey: "address")
+        coder.encode(status, forKey: "status")
+        coder.encode(players, forKey: "players")
+        coder.encode(maxPlayers, forKey: "maxPlayers")
     }
 }

@@ -12,8 +12,8 @@ class IndicatorView : NSView {
     let greenColor = NSColor(calibratedRed:0.325, green:0.843, blue:0.302, alpha:1)
     let redColor = NSColor(calibratedRed:1, green:0.247, blue:0.251, alpha:1)
     
-    override func drawRect(dirtyRect: NSRect) {
-        let path = NSBezierPath(ovalInRect: self.bounds)
+    override func draw(_ dirtyRect: NSRect) {
+        let path = NSBezierPath(ovalIn: self.bounds)
         
         let color = up ? greenColor : redColor
         color.setFill()
@@ -35,7 +35,7 @@ class ListRowViewController: NSViewController {
         let server = self.representedObject as? ServerObject
         
         if let serverStatus = server?.status {
-            statusIndicatorView!.up = (serverStatus.caseInsensitiveCompare("UP") == NSComparisonResult.OrderedSame)
+            statusIndicatorView!.up = (serverStatus.caseInsensitiveCompare("UP") == ComparisonResult.orderedSame)
         }
     }
 

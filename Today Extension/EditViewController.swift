@@ -8,7 +8,7 @@ import Cocoa
 
 class EditViewController: NSViewController {
     
-    let sharedUD = NSUserDefaults(suiteName: UDSuiteName)
+    let sharedUD = UserDefaults(suiteName: UDSuiteName)
     
     var todayController: TodayViewController!
     @IBOutlet weak var accountIDField: NSTextField!
@@ -21,7 +21,7 @@ class EditViewController: NSViewController {
     
     override func viewDidLoad() {
         
-        if let id = sharedUD?.stringForKey(UDAccountIDKey) {
+        if let id = sharedUD?.string(forKey: UDAccountIDKey) {
             accountIDField.stringValue = id
         }
     }

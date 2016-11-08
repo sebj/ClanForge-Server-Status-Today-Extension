@@ -15,14 +15,14 @@ let UDCacheKey = "dataCache"
 let UDLastRefreshKey = "lastRefresh"
 
 
-func debugOnlyPrint(items: Any...) {
+func debugOnlyPrint(_ items: Any...) {
     #if DEBUG
         print(items)
     #endif
 }
 
-func validAccountID(accountID: String?) -> Bool {
-    if let a = accountID, _ = Int(a) where a.characters.count == 6 {
+func validAccountID(_ accountID: String?) -> Bool {
+    if let a = accountID, let _ = Int(a), a.characters.count == 6 {
         return true
     }
     
